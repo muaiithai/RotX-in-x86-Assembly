@@ -6,9 +6,10 @@
 
 # Program starts here
 main:
-    mov r14, [rsi + 8]
-    mov r15, [rsi + 16]
-    movzx r10, byte ptr [r15]
+	mov r14, [rsi + 8]
+   	mov r15, [rsi + 16]
+	movzx r10, byte ptr [r15]
+	mov r8, 0
 str_to_int:
 	movzx rdi, byte ptr [r15]
 	cmp rdi, '-'
@@ -52,3 +53,4 @@ end_rot:
 	mov rdi, '\n'
 	call putchar@PLT
 	ret
+
